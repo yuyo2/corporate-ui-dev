@@ -41,7 +41,7 @@ function walkDir(dir, done) {
               cssContent = '';
               cssContent += '\nexport const ' + brandName + ' = `';
               cssContent += sass.renderSync({ data: dt[a] }).css;
-              cssContent += '\`\n';
+              cssContent += '`;\n';
 
               if (componentCSS[filename]) {
                 componentCSS[filename] += cssContent;
@@ -83,7 +83,7 @@ function generateTheme() {
       console.log(err);
     }
     files.forEach(file => {
-    walkDir(inputFolder, function(err2, data, globalCSS, componentCSS) {
+      walkDir(inputFolder, function(err2, data, globalCSS, componentCSS) {
         console.log('============ checking ', file)
 
         if (err2) {
@@ -98,9 +98,9 @@ function generateTheme() {
               outputFolder + file + '.ts',
               addString,
               'utf8',
-              err4 => {
-                if (err4) {
-                  throw err4;
+              err3 => {
+                if (err3) {
+                  throw err3;
                 }
                 console.log('write file ' + file + '.ts');
               }
@@ -115,9 +115,12 @@ function generateTheme() {
 generateTheme();
 
 if (process.argv.indexOf('--watch') > -1) {
-  console.log('Watching themes for changes.');
+  fs.watch(inputFolder, { recursive: true }, (eventType, filename) => {
+    console.log('File was changed, rebuilding themes');
 
-  fs.watch(inputFolder, (eventType, filename) => {
+
     generateTheme();
   });
+
+  console.log('Watching themes for changes');
 }
