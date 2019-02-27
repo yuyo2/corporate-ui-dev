@@ -6,14 +6,14 @@
   "app": {
     "namespace": "CorporateUi",
     "fsNamespace": "corporate-ui",
-    "components": 13,
+    "components": 14,
     "entries": 12,
     "bundles": 96
   },
   "options": {
     "minifyJs": true,
     "minifyCss": true,
-    "hashFileNames": true,
+    "hashFileNames": false,
     "hashedFileNameLength": 8,
     "buildEs5": true
   },
@@ -50,8 +50,17 @@
     },
     {
       "tag": "c-header",
-      "dependencies": [],
+      "dependencies": [
+        "c-navigation"
+      ],
       "dependencyOf": []
+    },
+    {
+      "tag": "c-navigation",
+      "dependencies": [],
+      "dependencyOf": [
+        "c-header"
+      ]
     },
     {
       "tag": "c-icon",
@@ -61,16 +70,15 @@
     {
       "tag": "c-list",
       "dependencies": [],
-      "dependencyOf": ["user-repos"]
+      "dependencyOf": [
+        "user-repos"
+      ]
     },
     {
       "tag": "user-repos",
-      "dependencies": ["c-list"],
-      "dependencyOf": []
-    },
-    {
-      "tag": "c-navigation",
-      "dependencies": [],
+      "dependencies": [
+        "c-list"
+      ],
       "dependencyOf": []
     },
     {
@@ -80,6 +88,11 @@
     },
     {
       "tag": "c-theme",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "router-navigation",
       "dependencies": [],
       "dependencyOf": []
     }
@@ -96,72 +109,84 @@
       ],
       "bundles": [
         {
-          "fileName": "t8wqrblk.entry.js",
+          "fileName": "c-card.entry.js",
           "outputs": [
-            "dist/corporate-ui/t8wqrblk.entry.js",
-            "www/build/corporate-ui/t8wqrblk.entry.js"
+            "dist/corporate-ui/c-card.entry.js",
+            "www/build/corporate-ui/c-card.entry.js"
           ],
-          "size": 7416,
+          "size": 6009,
           "target": "es2017"
         },
         {
-          "fileName": "t8wqrblk.entry.js",
-          "outputs": ["dist/esm/es2017/build/t8wqrblk.entry.js"],
-          "size": 7935,
+          "fileName": "c-card.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-card.entry.js"
+          ],
+          "size": 6524,
           "target": "es2017"
         },
         {
-          "fileName": "t8wqrblk.entry.js",
-          "outputs": ["dist/esm/es5/build/t8wqrblk.entry.js"],
-          "size": 7790,
+          "fileName": "c-card.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-card.entry.js"
+          ],
+          "size": 6383,
           "target": "es5"
         },
         {
-          "fileName": "t8wqrblk.es5.entry.js",
+          "fileName": "c-card.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/t8wqrblk.es5.entry.js",
-            "www/build/corporate-ui/t8wqrblk.es5.entry.js"
+            "dist/corporate-ui/c-card.es5.entry.js",
+            "www/build/corporate-ui/c-card.es5.entry.js"
           ],
-          "size": 7868,
+          "size": 6459,
           "target": "es5"
         },
         {
-          "fileName": "t8wqrblk.sc.entry.js",
+          "fileName": "c-card.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/t8wqrblk.sc.entry.js",
-            "www/build/corporate-ui/t8wqrblk.sc.entry.js"
+            "dist/corporate-ui/c-card.sc.entry.js",
+            "www/build/corporate-ui/c-card.sc.entry.js"
           ],
-          "size": 10383,
+          "size": 8188,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "t8wqrblk.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/t8wqrblk.sc.entry.js"],
-          "size": 10902,
+          "fileName": "c-card.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-card.sc.entry.js"
+          ],
+          "size": 8703,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "t8wqrblk.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/t8wqrblk.sc.entry.js"],
-          "size": 10757,
+          "fileName": "c-card.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-card.sc.entry.js"
+          ],
+          "size": 8562,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "t8wqrblk.sc.es5.entry.js",
+          "fileName": "c-card.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/t8wqrblk.sc.es5.entry.js",
-            "www/build/corporate-ui/t8wqrblk.sc.es5.entry.js"
+            "dist/corporate-ui/c-card.sc.es5.entry.js",
+            "www/build/corporate-ui/c-card.sc.es5.entry.js"
           ],
-          "size": 10835,
+          "size": 8638,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/card/card.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/card/card.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-column",
@@ -174,72 +199,84 @@
       ],
       "bundles": [
         {
-          "fileName": "58ntizpn.entry.js",
+          "fileName": "c-column.entry.js",
           "outputs": [
-            "dist/corporate-ui/58ntizpn.entry.js",
-            "www/build/corporate-ui/58ntizpn.entry.js"
+            "dist/corporate-ui/c-column.entry.js",
+            "www/build/corporate-ui/c-column.entry.js"
           ],
-          "size": 13294,
+          "size": 13351,
           "target": "es2017"
         },
         {
-          "fileName": "58ntizpn.entry.js",
-          "outputs": ["dist/esm/es2017/build/58ntizpn.entry.js"],
-          "size": 14158,
+          "fileName": "c-column.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-column.entry.js"
+          ],
+          "size": 14215,
           "target": "es2017"
         },
         {
-          "fileName": "58ntizpn.entry.js",
-          "outputs": ["dist/esm/es5/build/58ntizpn.entry.js"],
-          "size": 13658,
+          "fileName": "c-column.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-column.entry.js"
+          ],
+          "size": 13715,
           "target": "es5"
         },
         {
-          "fileName": "58ntizpn.es5.entry.js",
+          "fileName": "c-column.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/58ntizpn.es5.entry.js",
-            "www/build/corporate-ui/58ntizpn.es5.entry.js"
+            "dist/corporate-ui/c-column.es5.entry.js",
+            "www/build/corporate-ui/c-column.es5.entry.js"
           ],
-          "size": 13732,
+          "size": 13789,
           "target": "es5"
         },
         {
-          "fileName": "58ntizpn.sc.entry.js",
+          "fileName": "c-column.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/58ntizpn.sc.entry.js",
-            "www/build/corporate-ui/58ntizpn.sc.entry.js"
+            "dist/corporate-ui/c-column.sc.entry.js",
+            "www/build/corporate-ui/c-column.sc.entry.js"
           ],
-          "size": 15586,
+          "size": 15667,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "58ntizpn.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/58ntizpn.sc.entry.js"],
-          "size": 16450,
+          "fileName": "c-column.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-column.sc.entry.js"
+          ],
+          "size": 16531,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "58ntizpn.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/58ntizpn.sc.entry.js"],
-          "size": 15950,
+          "fileName": "c-column.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-column.sc.entry.js"
+          ],
+          "size": 16031,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "58ntizpn.sc.es5.entry.js",
+          "fileName": "c-column.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/58ntizpn.sc.es5.entry.js",
-            "www/build/corporate-ui/58ntizpn.sc.es5.entry.js"
+            "dist/corporate-ui/c-column.sc.es5.entry.js",
+            "www/build/corporate-ui/c-column.sc.es5.entry.js"
           ],
-          "size": 16024,
+          "size": 16105,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/column/column.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/column/column.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-container",
@@ -252,72 +289,84 @@
       ],
       "bundles": [
         {
-          "fileName": "mxa50uc7.entry.js",
+          "fileName": "c-container.entry.js",
           "outputs": [
-            "dist/corporate-ui/mxa50uc7.entry.js",
-            "www/build/corporate-ui/mxa50uc7.entry.js"
+            "dist/corporate-ui/c-container.entry.js",
+            "www/build/corporate-ui/c-container.entry.js"
           ],
-          "size": 921,
+          "size": 978,
           "target": "es2017"
         },
         {
-          "fileName": "mxa50uc7.entry.js",
-          "outputs": ["dist/esm/es2017/build/mxa50uc7.entry.js"],
-          "size": 1165,
+          "fileName": "c-container.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-container.entry.js"
+          ],
+          "size": 1222,
           "target": "es2017"
         },
         {
-          "fileName": "mxa50uc7.entry.js",
-          "outputs": ["dist/esm/es5/build/mxa50uc7.entry.js"],
-          "size": 1271,
+          "fileName": "c-container.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-container.entry.js"
+          ],
+          "size": 1328,
           "target": "es5"
         },
         {
-          "fileName": "mxa50uc7.es5.entry.js",
+          "fileName": "c-container.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/mxa50uc7.es5.entry.js",
-            "www/build/corporate-ui/mxa50uc7.es5.entry.js"
+            "dist/corporate-ui/c-container.es5.entry.js",
+            "www/build/corporate-ui/c-container.es5.entry.js"
           ],
-          "size": 1339,
+          "size": 1399,
           "target": "es5"
         },
         {
-          "fileName": "mxa50uc7.sc.entry.js",
+          "fileName": "c-container.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/mxa50uc7.sc.entry.js",
-            "www/build/corporate-ui/mxa50uc7.sc.entry.js"
+            "dist/corporate-ui/c-container.sc.entry.js",
+            "www/build/corporate-ui/c-container.sc.entry.js"
           ],
-          "size": 1095,
+          "size": 1182,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "mxa50uc7.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/mxa50uc7.sc.entry.js"],
-          "size": 1339,
+          "fileName": "c-container.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-container.sc.entry.js"
+          ],
+          "size": 1426,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "mxa50uc7.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/mxa50uc7.sc.entry.js"],
-          "size": 1445,
+          "fileName": "c-container.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-container.sc.entry.js"
+          ],
+          "size": 1532,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "mxa50uc7.sc.es5.entry.js",
+          "fileName": "c-container.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/mxa50uc7.sc.es5.entry.js",
-            "www/build/corporate-ui/mxa50uc7.sc.es5.entry.js"
+            "dist/corporate-ui/c-container.sc.es5.entry.js",
+            "www/build/corporate-ui/c-container.sc.es5.entry.js"
           ],
-          "size": 1513,
+          "size": 1603,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/container/container.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/container/container.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-content",
@@ -330,72 +379,84 @@
       ],
       "bundles": [
         {
-          "fileName": "wrjspzkt.entry.js",
+          "fileName": "c-content.entry.js",
           "outputs": [
-            "dist/corporate-ui/wrjspzkt.entry.js",
-            "www/build/corporate-ui/wrjspzkt.entry.js"
+            "dist/corporate-ui/c-content.entry.js",
+            "www/build/corporate-ui/c-content.entry.js"
           ],
           "size": 555,
           "target": "es2017"
         },
         {
-          "fileName": "wrjspzkt.entry.js",
-          "outputs": ["dist/esm/es2017/build/wrjspzkt.entry.js"],
+          "fileName": "c-content.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-content.entry.js"
+          ],
           "size": 889,
           "target": "es2017"
         },
         {
-          "fileName": "wrjspzkt.entry.js",
-          "outputs": ["dist/esm/es5/build/wrjspzkt.entry.js"],
+          "fileName": "c-content.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-content.entry.js"
+          ],
           "size": 881,
           "target": "es5"
         },
         {
-          "fileName": "wrjspzkt.es5.entry.js",
+          "fileName": "c-content.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/wrjspzkt.es5.entry.js",
-            "www/build/corporate-ui/wrjspzkt.es5.entry.js"
+            "dist/corporate-ui/c-content.es5.entry.js",
+            "www/build/corporate-ui/c-content.es5.entry.js"
           ],
-          "size": 953,
+          "size": 954,
           "target": "es5"
         },
         {
-          "fileName": "wrjspzkt.sc.entry.js",
+          "fileName": "c-content.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/wrjspzkt.sc.entry.js",
-            "www/build/corporate-ui/wrjspzkt.sc.entry.js"
+            "dist/corporate-ui/c-content.sc.entry.js",
+            "www/build/corporate-ui/c-content.sc.entry.js"
           ],
           "size": 565,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "wrjspzkt.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/wrjspzkt.sc.entry.js"],
+          "fileName": "c-content.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-content.sc.entry.js"
+          ],
           "size": 899,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "wrjspzkt.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/wrjspzkt.sc.entry.js"],
+          "fileName": "c-content.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-content.sc.entry.js"
+          ],
           "size": 891,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "wrjspzkt.sc.es5.entry.js",
+          "fileName": "c-content.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/wrjspzkt.sc.es5.entry.js",
-            "www/build/corporate-ui/wrjspzkt.sc.es5.entry.js"
+            "dist/corporate-ui/c-content.sc.es5.entry.js",
+            "www/build/corporate-ui/c-content.sc.es5.entry.js"
           ],
-          "size": 963,
+          "size": 964,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/content/content.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/content/content.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-field",
@@ -408,72 +469,84 @@
       ],
       "bundles": [
         {
-          "fileName": "t3ee9ije.entry.js",
+          "fileName": "c-field.entry.js",
           "outputs": [
-            "dist/corporate-ui/t3ee9ije.entry.js",
-            "www/build/corporate-ui/t3ee9ije.entry.js"
+            "dist/corporate-ui/c-field.entry.js",
+            "www/build/corporate-ui/c-field.entry.js"
           ],
           "size": 438,
           "target": "es2017"
         },
         {
-          "fileName": "t3ee9ije.entry.js",
-          "outputs": ["dist/esm/es2017/build/t3ee9ije.entry.js"],
-          "size": 783,
+          "fileName": "c-field.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-field.entry.js"
+          ],
+          "size": 781,
           "target": "es2017"
         },
         {
-          "fileName": "t3ee9ije.entry.js",
-          "outputs": ["dist/esm/es5/build/t3ee9ije.entry.js"],
+          "fileName": "c-field.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-field.entry.js"
+          ],
           "size": 745,
           "target": "es5"
         },
         {
-          "fileName": "t3ee9ije.es5.entry.js",
+          "fileName": "c-field.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/t3ee9ije.es5.entry.js",
-            "www/build/corporate-ui/t3ee9ije.es5.entry.js"
+            "dist/corporate-ui/c-field.es5.entry.js",
+            "www/build/corporate-ui/c-field.es5.entry.js"
           ],
-          "size": 821,
+          "size": 820,
           "target": "es5"
         },
         {
-          "fileName": "t3ee9ije.sc.entry.js",
+          "fileName": "c-field.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/t3ee9ije.sc.entry.js",
-            "www/build/corporate-ui/t3ee9ije.sc.entry.js"
+            "dist/corporate-ui/c-field.sc.entry.js",
+            "www/build/corporate-ui/c-field.sc.entry.js"
           ],
           "size": 438,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "t3ee9ije.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/t3ee9ije.sc.entry.js"],
-          "size": 783,
+          "fileName": "c-field.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-field.sc.entry.js"
+          ],
+          "size": 781,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "t3ee9ije.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/t3ee9ije.sc.entry.js"],
+          "fileName": "c-field.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-field.sc.entry.js"
+          ],
           "size": 745,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "t3ee9ije.sc.es5.entry.js",
+          "fileName": "c-field.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/t3ee9ije.sc.es5.entry.js",
-            "www/build/corporate-ui/t3ee9ije.sc.es5.entry.js"
+            "dist/corporate-ui/c-field.sc.es5.entry.js",
+            "www/build/corporate-ui/c-field.sc.es5.entry.js"
           ],
-          "size": 821,
+          "size": 820,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/field/field.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/field/field.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-footer",
@@ -486,150 +559,184 @@
       ],
       "bundles": [
         {
-          "fileName": "f7i7rt7y.entry.js",
+          "fileName": "c-footer.entry.js",
           "outputs": [
-            "dist/corporate-ui/f7i7rt7y.entry.js",
-            "www/build/corporate-ui/f7i7rt7y.entry.js"
+            "dist/corporate-ui/c-footer.entry.js",
+            "www/build/corporate-ui/c-footer.entry.js"
           ],
-          "size": 1678,
+          "size": 80284,
           "target": "es2017"
         },
         {
-          "fileName": "f7i7rt7y.entry.js",
-          "outputs": ["dist/esm/es2017/build/f7i7rt7y.entry.js"],
-          "size": 2246,
+          "fileName": "c-footer.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-footer.entry.js"
+          ],
+          "size": 81280,
           "target": "es2017"
         },
         {
-          "fileName": "f7i7rt7y.entry.js",
-          "outputs": ["dist/esm/es5/build/f7i7rt7y.entry.js"],
-          "size": 2112,
+          "fileName": "c-footer.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-footer.entry.js"
+          ],
+          "size": 80794,
           "target": "es5"
         },
         {
-          "fileName": "f7i7rt7y.es5.entry.js",
+          "fileName": "c-footer.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/f7i7rt7y.es5.entry.js",
-            "www/build/corporate-ui/f7i7rt7y.es5.entry.js"
+            "dist/corporate-ui/c-footer.es5.entry.js",
+            "www/build/corporate-ui/c-footer.es5.entry.js"
           ],
-          "size": 2120,
+          "size": 80802,
           "target": "es5"
         },
         {
-          "fileName": "f7i7rt7y.sc.entry.js",
+          "fileName": "c-footer.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/f7i7rt7y.sc.entry.js",
-            "www/build/corporate-ui/f7i7rt7y.sc.entry.js"
+            "dist/corporate-ui/c-footer.sc.entry.js",
+            "www/build/corporate-ui/c-footer.sc.entry.js"
           ],
-          "size": 1733,
+          "size": 104457,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "f7i7rt7y.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/f7i7rt7y.sc.entry.js"],
-          "size": 2301,
+          "fileName": "c-footer.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-footer.sc.entry.js"
+          ],
+          "size": 105453,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "f7i7rt7y.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/f7i7rt7y.sc.entry.js"],
-          "size": 2167,
+          "fileName": "c-footer.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-footer.sc.entry.js"
+          ],
+          "size": 104967,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "f7i7rt7y.sc.es5.entry.js",
+          "fileName": "c-footer.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/f7i7rt7y.sc.es5.entry.js",
-            "www/build/corporate-ui/f7i7rt7y.sc.es5.entry.js"
+            "dist/corporate-ui/c-footer.sc.es5.entry.js",
+            "www/build/corporate-ui/c-footer.sc.es5.entry.js"
           ],
-          "size": 2175,
+          "size": 104975,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/footer/footer.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/footer/footer.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
-      "entryId": "entry.c-header",
+      "entryId": "entry.c-header.c-navigation",
       "components": [
         {
           "tag": "c-header",
-          "dependencies": [],
+          "dependencies": [
+            "c-navigation"
+          ],
           "dependencyOf": []
+        },
+        {
+          "tag": "c-navigation",
+          "dependencies": [],
+          "dependencyOf": [
+            "c-header"
+          ]
         }
       ],
       "bundles": [
         {
-          "fileName": "ry7twrd0.entry.js",
+          "fileName": "c-header.entry.js",
           "outputs": [
-            "dist/corporate-ui/ry7twrd0.entry.js",
-            "www/build/corporate-ui/ry7twrd0.entry.js"
+            "dist/corporate-ui/c-header.entry.js",
+            "www/build/corporate-ui/c-header.entry.js"
           ],
-          "size": 59010,
+          "size": 122602,
           "target": "es2017"
         },
         {
-          "fileName": "ry7twrd0.entry.js",
-          "outputs": ["dist/esm/es2017/build/ry7twrd0.entry.js"],
-          "size": 60044,
+          "fileName": "c-header.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-header.entry.js"
+          ],
+          "size": 124949,
           "target": "es2017"
         },
         {
-          "fileName": "ry7twrd0.entry.js",
-          "outputs": ["dist/esm/es5/build/ry7twrd0.entry.js"],
-          "size": 59488,
+          "fileName": "c-header.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-header.entry.js"
+          ],
+          "size": 123578,
           "target": "es5"
         },
         {
-          "fileName": "ry7twrd0.es5.entry.js",
+          "fileName": "c-header.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/ry7twrd0.es5.entry.js",
-            "www/build/corporate-ui/ry7twrd0.es5.entry.js"
+            "dist/corporate-ui/c-header.es5.entry.js",
+            "www/build/corporate-ui/c-header.es5.entry.js"
           ],
-          "size": 59496,
+          "size": 123541,
           "target": "es5"
         },
         {
-          "fileName": "ry7twrd0.sc.entry.js",
+          "fileName": "c-header.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/ry7twrd0.sc.entry.js",
-            "www/build/corporate-ui/ry7twrd0.sc.entry.js"
+            "dist/corporate-ui/c-header.sc.entry.js",
+            "www/build/corporate-ui/c-header.sc.entry.js"
           ],
-          "size": 77749,
+          "size": 167612,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "ry7twrd0.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/ry7twrd0.sc.entry.js"],
-          "size": 78783,
+          "fileName": "c-header.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-header.sc.entry.js"
+          ],
+          "size": 169959,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "ry7twrd0.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/ry7twrd0.sc.entry.js"],
-          "size": 78227,
+          "fileName": "c-header.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-header.sc.entry.js"
+          ],
+          "size": 168588,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "ry7twrd0.sc.es5.entry.js",
+          "fileName": "c-header.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/ry7twrd0.sc.es5.entry.js",
-            "www/build/corporate-ui/ry7twrd0.sc.es5.entry.js"
+            "dist/corporate-ui/c-header.sc.es5.entry.js",
+            "www/build/corporate-ui/c-header.sc.es5.entry.js"
           ],
-          "size": 78235,
+          "size": 168551,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/header/header.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/header/header.js",
+        "src/components/navigation/navigation.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-icon",
@@ -642,72 +749,84 @@
       ],
       "bundles": [
         {
-          "fileName": "syymljvp.entry.js",
+          "fileName": "c-icon.entry.js",
           "outputs": [
-            "dist/corporate-ui/syymljvp.entry.js",
-            "www/build/corporate-ui/syymljvp.entry.js"
+            "dist/corporate-ui/c-icon.entry.js",
+            "www/build/corporate-ui/c-icon.entry.js"
           ],
           "size": 389,
           "target": "es2017"
         },
         {
-          "fileName": "syymljvp.entry.js",
-          "outputs": ["dist/esm/es2017/build/syymljvp.entry.js"],
-          "size": 560,
+          "fileName": "c-icon.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-icon.entry.js"
+          ],
+          "size": 558,
           "target": "es2017"
         },
         {
-          "fileName": "syymljvp.entry.js",
-          "outputs": ["dist/esm/es5/build/syymljvp.entry.js"],
+          "fileName": "c-icon.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-icon.entry.js"
+          ],
           "size": 709,
           "target": "es5"
         },
         {
-          "fileName": "syymljvp.es5.entry.js",
+          "fileName": "c-icon.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/syymljvp.es5.entry.js",
-            "www/build/corporate-ui/syymljvp.es5.entry.js"
+            "dist/corporate-ui/c-icon.es5.entry.js",
+            "www/build/corporate-ui/c-icon.es5.entry.js"
           ],
-          "size": 787,
+          "size": 785,
           "target": "es5"
         },
         {
-          "fileName": "syymljvp.sc.entry.js",
+          "fileName": "c-icon.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/syymljvp.sc.entry.js",
-            "www/build/corporate-ui/syymljvp.sc.entry.js"
+            "dist/corporate-ui/c-icon.sc.entry.js",
+            "www/build/corporate-ui/c-icon.sc.entry.js"
           ],
           "size": 396,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "syymljvp.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/syymljvp.sc.entry.js"],
-          "size": 567,
+          "fileName": "c-icon.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-icon.sc.entry.js"
+          ],
+          "size": 565,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "syymljvp.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/syymljvp.sc.entry.js"],
+          "fileName": "c-icon.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-icon.sc.entry.js"
+          ],
           "size": 716,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "syymljvp.sc.es5.entry.js",
+          "fileName": "c-icon.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/syymljvp.sc.es5.entry.js",
-            "www/build/corporate-ui/syymljvp.sc.es5.entry.js"
+            "dist/corporate-ui/c-icon.sc.es5.entry.js",
+            "www/build/corporate-ui/c-icon.sc.es5.entry.js"
           ],
-          "size": 794,
+          "size": 792,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/icon/icon.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/icon/icon.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-list.user-repos",
@@ -715,76 +834,88 @@
         {
           "tag": "c-list",
           "dependencies": [],
-          "dependencyOf": ["user-repos"]
+          "dependencyOf": [
+            "user-repos"
+          ]
         },
         {
           "tag": "user-repos",
-          "dependencies": ["c-list"],
+          "dependencies": [
+            "c-list"
+          ],
           "dependencyOf": []
         }
       ],
       "bundles": [
         {
-          "fileName": "f2jwbsdj.entry.js",
+          "fileName": "c-list.entry.js",
           "outputs": [
-            "dist/corporate-ui/f2jwbsdj.entry.js",
-            "www/build/corporate-ui/f2jwbsdj.entry.js"
+            "dist/corporate-ui/c-list.entry.js",
+            "www/build/corporate-ui/c-list.entry.js"
           ],
           "size": 845,
           "target": "es2017"
         },
         {
-          "fileName": "f2jwbsdj.entry.js",
-          "outputs": ["dist/esm/es2017/build/f2jwbsdj.entry.js"],
-          "size": 1367,
+          "fileName": "c-list.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-list.entry.js"
+          ],
+          "size": 1417,
           "target": "es2017"
         },
         {
-          "fileName": "f2jwbsdj.entry.js",
-          "outputs": ["dist/esm/es5/build/f2jwbsdj.entry.js"],
+          "fileName": "c-list.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-list.entry.js"
+          ],
           "size": 1521,
           "target": "es5"
         },
         {
-          "fileName": "f2jwbsdj.es5.entry.js",
+          "fileName": "c-list.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/f2jwbsdj.es5.entry.js",
-            "www/build/corporate-ui/f2jwbsdj.es5.entry.js"
+            "dist/corporate-ui/c-list.es5.entry.js",
+            "www/build/corporate-ui/c-list.es5.entry.js"
           ],
-          "size": 1595,
+          "size": 1593,
           "target": "es5"
         },
         {
-          "fileName": "f2jwbsdj.sc.entry.js",
+          "fileName": "c-list.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/f2jwbsdj.sc.entry.js",
-            "www/build/corporate-ui/f2jwbsdj.sc.entry.js"
+            "dist/corporate-ui/c-list.sc.entry.js",
+            "www/build/corporate-ui/c-list.sc.entry.js"
           ],
           "size": 845,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "f2jwbsdj.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/f2jwbsdj.sc.entry.js"],
-          "size": 1367,
+          "fileName": "c-list.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-list.sc.entry.js"
+          ],
+          "size": 1417,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "f2jwbsdj.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/f2jwbsdj.sc.entry.js"],
+          "fileName": "c-list.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-list.sc.entry.js"
+          ],
           "size": 1521,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "f2jwbsdj.sc.es5.entry.js",
+          "fileName": "c-list.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/f2jwbsdj.sc.es5.entry.js",
-            "www/build/corporate-ui/f2jwbsdj.sc.es5.entry.js"
+            "dist/corporate-ui/c-list.sc.es5.entry.js",
+            "www/build/corporate-ui/c-list.sc.es5.entry.js"
           ],
-          "size": 1595,
+          "size": 1593,
           "target": "es5",
           "scopedStyles": true
         }
@@ -793,85 +924,9 @@
         "src/components/list/list.js",
         "src/components/user-repos/user-repos.js"
       ],
-      "encapsulations": ["shadow"]
-    },
-    {
-      "entryId": "entry.c-navigation",
-      "components": [
-        {
-          "tag": "c-navigation",
-          "dependencies": [],
-          "dependencyOf": []
-        }
-      ],
-      "bundles": [
-        {
-          "fileName": "c3j79io6.entry.js",
-          "outputs": [
-            "dist/corporate-ui/c3j79io6.entry.js",
-            "www/build/corporate-ui/c3j79io6.entry.js"
-          ],
-          "size": 13113,
-          "target": "es2017"
-        },
-        {
-          "fileName": "c3j79io6.entry.js",
-          "outputs": ["dist/esm/es2017/build/c3j79io6.entry.js"],
-          "size": 13690,
-          "target": "es2017"
-        },
-        {
-          "fileName": "c3j79io6.entry.js",
-          "outputs": ["dist/esm/es5/build/c3j79io6.entry.js"],
-          "size": 13491,
-          "target": "es5"
-        },
-        {
-          "fileName": "c3j79io6.es5.entry.js",
-          "outputs": [
-            "dist/corporate-ui/c3j79io6.es5.entry.js",
-            "www/build/corporate-ui/c3j79io6.es5.entry.js"
-          ],
-          "size": 13557,
-          "target": "es5"
-        },
-        {
-          "fileName": "c3j79io6.sc.entry.js",
-          "outputs": [
-            "dist/corporate-ui/c3j79io6.sc.entry.js",
-            "www/build/corporate-ui/c3j79io6.sc.entry.js"
-          ],
-          "size": 18508,
-          "target": "es2017",
-          "scopedStyles": true
-        },
-        {
-          "fileName": "c3j79io6.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/c3j79io6.sc.entry.js"],
-          "size": 19085,
-          "target": "es2017",
-          "scopedStyles": true
-        },
-        {
-          "fileName": "c3j79io6.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/c3j79io6.sc.entry.js"],
-          "size": 18886,
-          "target": "es5",
-          "scopedStyles": true
-        },
-        {
-          "fileName": "c3j79io6.sc.es5.entry.js",
-          "outputs": [
-            "dist/corporate-ui/c3j79io6.sc.es5.entry.js",
-            "www/build/corporate-ui/c3j79io6.sc.es5.entry.js"
-          ],
-          "size": 18952,
-          "target": "es5",
-          "scopedStyles": true
-        }
-      ],
-      "inputs": ["src/components/navigation/navigation.js"],
-      "encapsulations": ["shadow"]
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-row",
@@ -884,72 +939,84 @@
       ],
       "bundles": [
         {
-          "fileName": "o1le0lpr.entry.js",
+          "fileName": "c-row.entry.js",
           "outputs": [
-            "dist/corporate-ui/o1le0lpr.entry.js",
-            "www/build/corporate-ui/o1le0lpr.entry.js"
+            "dist/corporate-ui/c-row.entry.js",
+            "www/build/corporate-ui/c-row.entry.js"
           ],
-          "size": 498,
+          "size": 555,
           "target": "es2017"
         },
         {
-          "fileName": "o1le0lpr.entry.js",
-          "outputs": ["dist/esm/es2017/build/o1le0lpr.entry.js"],
-          "size": 641,
+          "fileName": "c-row.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-row.entry.js"
+          ],
+          "size": 698,
           "target": "es2017"
         },
         {
-          "fileName": "o1le0lpr.entry.js",
-          "outputs": ["dist/esm/es5/build/o1le0lpr.entry.js"],
-          "size": 776,
+          "fileName": "c-row.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-row.entry.js"
+          ],
+          "size": 833,
           "target": "es5"
         },
         {
-          "fileName": "o1le0lpr.es5.entry.js",
+          "fileName": "c-row.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/o1le0lpr.es5.entry.js",
-            "www/build/corporate-ui/o1le0lpr.es5.entry.js"
+            "dist/corporate-ui/c-row.es5.entry.js",
+            "www/build/corporate-ui/c-row.es5.entry.js"
           ],
-          "size": 856,
+          "size": 910,
           "target": "es5"
         },
         {
-          "fileName": "o1le0lpr.sc.entry.js",
+          "fileName": "c-row.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/o1le0lpr.sc.entry.js",
-            "www/build/corporate-ui/o1le0lpr.sc.entry.js"
+            "dist/corporate-ui/c-row.sc.entry.js",
+            "www/build/corporate-ui/c-row.sc.entry.js"
           ],
-          "size": 572,
+          "size": 647,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "o1le0lpr.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/o1le0lpr.sc.entry.js"],
-          "size": 715,
+          "fileName": "c-row.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-row.sc.entry.js"
+          ],
+          "size": 790,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "o1le0lpr.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/o1le0lpr.sc.entry.js"],
-          "size": 850,
+          "fileName": "c-row.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-row.sc.entry.js"
+          ],
+          "size": 925,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "o1le0lpr.sc.es5.entry.js",
+          "fileName": "c-row.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/o1le0lpr.sc.es5.entry.js",
-            "www/build/corporate-ui/o1le0lpr.sc.es5.entry.js"
+            "dist/corporate-ui/c-row.sc.es5.entry.js",
+            "www/build/corporate-ui/c-row.sc.es5.entry.js"
           ],
-          "size": 930,
+          "size": 1002,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/row/row.js"],
-      "encapsulations": ["shadow"]
+      "inputs": [
+        "src/components/row/row.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     },
     {
       "entryId": "entry.c-theme",
@@ -962,72 +1029,174 @@
       ],
       "bundles": [
         {
-          "fileName": "dkru5lc1.entry.js",
+          "fileName": "c-theme.entry.js",
           "outputs": [
-            "dist/corporate-ui/dkru5lc1.entry.js",
-            "www/build/corporate-ui/dkru5lc1.entry.js"
+            "dist/corporate-ui/c-theme.entry.js",
+            "www/build/corporate-ui/c-theme.entry.js"
           ],
-          "size": 160033,
+          "size": 163494,
           "target": "es2017"
         },
         {
-          "fileName": "dkru5lc1.entry.js",
-          "outputs": ["dist/esm/es2017/build/dkru5lc1.entry.js"],
-          "size": 160513,
+          "fileName": "c-theme.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-theme.entry.js"
+          ],
+          "size": 163906,
           "target": "es2017"
         },
         {
-          "fileName": "dkru5lc1.entry.js",
-          "outputs": ["dist/esm/es5/build/dkru5lc1.entry.js"],
-          "size": 160413,
+          "fileName": "c-theme.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-theme.entry.js"
+          ],
+          "size": 163874,
           "target": "es5"
         },
         {
-          "fileName": "dkru5lc1.es5.entry.js",
+          "fileName": "c-theme.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/dkru5lc1.es5.entry.js",
-            "www/build/corporate-ui/dkru5lc1.es5.entry.js"
+            "dist/corporate-ui/c-theme.es5.entry.js",
+            "www/build/corporate-ui/c-theme.es5.entry.js"
           ],
-          "size": 160421,
+          "size": 163881,
           "target": "es5"
         },
         {
-          "fileName": "dkru5lc1.sc.entry.js",
+          "fileName": "c-theme.sc.entry.js",
           "outputs": [
-            "dist/corporate-ui/dkru5lc1.sc.entry.js",
-            "www/build/corporate-ui/dkru5lc1.sc.entry.js"
+            "dist/corporate-ui/c-theme.sc.entry.js",
+            "www/build/corporate-ui/c-theme.sc.entry.js"
           ],
-          "size": 160033,
+          "size": 163494,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "dkru5lc1.sc.entry.js",
-          "outputs": ["dist/esm/es2017/build/dkru5lc1.sc.entry.js"],
-          "size": 160513,
+          "fileName": "c-theme.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/c-theme.sc.entry.js"
+          ],
+          "size": 163906,
           "target": "es2017",
           "scopedStyles": true
         },
         {
-          "fileName": "dkru5lc1.sc.entry.js",
-          "outputs": ["dist/esm/es5/build/dkru5lc1.sc.entry.js"],
-          "size": 160413,
+          "fileName": "c-theme.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/c-theme.sc.entry.js"
+          ],
+          "size": 163874,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "dkru5lc1.sc.es5.entry.js",
+          "fileName": "c-theme.sc.es5.entry.js",
           "outputs": [
-            "dist/corporate-ui/dkru5lc1.sc.es5.entry.js",
-            "www/build/corporate-ui/dkru5lc1.sc.es5.entry.js"
+            "dist/corporate-ui/c-theme.sc.es5.entry.js",
+            "www/build/corporate-ui/c-theme.sc.es5.entry.js"
           ],
-          "size": 160421,
+          "size": 163881,
           "target": "es5",
           "scopedStyles": true
         }
       ],
-      "inputs": ["src/components/theme/theme.js"],
-      "encapsulations": ["none"]
+      "inputs": [
+        "src/components/theme/theme.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry.router-navigation",
+      "components": [
+        {
+          "tag": "router-navigation",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "router-navigation.entry.js",
+          "outputs": [
+            "dist/corporate-ui/router-navigation.entry.js",
+            "www/build/corporate-ui/router-navigation.entry.js"
+          ],
+          "size": 12539,
+          "target": "es2017"
+        },
+        {
+          "fileName": "router-navigation.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/router-navigation.entry.js"
+          ],
+          "size": 12843,
+          "target": "es2017"
+        },
+        {
+          "fileName": "router-navigation.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/router-navigation.entry.js"
+          ],
+          "size": 12907,
+          "target": "es5"
+        },
+        {
+          "fileName": "router-navigation.es5.entry.js",
+          "outputs": [
+            "dist/corporate-ui/router-navigation.es5.entry.js",
+            "www/build/corporate-ui/router-navigation.es5.entry.js"
+          ],
+          "size": 12990,
+          "target": "es5"
+        },
+        {
+          "fileName": "router-navigation.sc.entry.js",
+          "outputs": [
+            "dist/corporate-ui/router-navigation.sc.entry.js",
+            "www/build/corporate-ui/router-navigation.sc.entry.js"
+          ],
+          "size": 19472,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "router-navigation.sc.entry.js",
+          "outputs": [
+            "dist/esm/es2017/build/router-navigation.sc.entry.js"
+          ],
+          "size": 19776,
+          "target": "es2017",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "router-navigation.sc.entry.js",
+          "outputs": [
+            "dist/esm/es5/build/router-navigation.sc.entry.js"
+          ],
+          "size": 19840,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "router-navigation.sc.es5.entry.js",
+          "outputs": [
+            "dist/corporate-ui/router-navigation.sc.es5.entry.js",
+            "www/build/corporate-ui/router-navigation.sc.es5.entry.js"
+          ],
+          "size": 19923,
+          "target": "es5",
+          "scopedStyles": true
+        }
+      ],
+      "inputs": [
+        "src/components/router-navigation/router-navigation.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
     }
   ],
   "rollupResults": {
@@ -1035,59 +1204,92 @@
       {
         "id": "entry.c-footer.js",
         "isEntry": true,
-        "imports": ["chunk-6df4da1d.js"],
-        "exports": ["CFooter"],
+        "imports": [
+          "chunk-60719840.js"
+        ],
+        "exports": [
+          "CFooter"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/themes.built/c-footer.js",
-            "exports": ["corporate", "man", "scania"]
+            "filename": "/home/martin/corporate-ui-dev/src/themes.built/footer.js",
+            "exports": [
+              "corporate",
+              "man",
+              "scania"
+            ]
           },
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/footer/footer.js",
-            "exports": ["Footer"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/footer/footer.js",
+            "exports": [
+              "Footer"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-footer.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-footer.js",
             "exports": []
           }
         ]
       },
       {
-        "id": "entry.c-theme.js",
+        "id": "entry.router-navigation.js",
         "isEntry": true,
-        "imports": ["chunk-6df4da1d.js"],
-        "exports": ["CTheme"],
+        "imports": [],
+        "exports": [
+          "RouterNavigation"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/themes.built/c-theme.js",
-            "exports": ["corporate", "man", "scania"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/router-navigation/router-navigation.js",
+            "exports": [
+              "RouterNavigation"
+            ]
           },
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/theme/theme.js",
-            "exports": ["Theme"]
-          },
-          {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-theme.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.router-navigation.js",
             "exports": []
           }
         ]
       },
       {
-        "id": "entry.c-header.js",
+        "id": "entry.c-header.c-navigation.js",
         "isEntry": true,
-        "imports": ["chunk-6df4da1d.js"],
-        "exports": ["CHeader"],
+        "imports": [
+          "chunk-60719840.js"
+        ],
+        "exports": [
+          "CHeader",
+          "CNavigation"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/themes.built/c-header.js",
-            "exports": ["corporate", "scania", "man"]
+            "filename": "/home/martin/corporate-ui-dev/src/themes.built/header.js",
+            "exports": [
+              "corporate",
+              "man",
+              "scania"
+            ]
           },
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/header/header.js",
-            "exports": ["Header"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/header/header.js",
+            "exports": [
+              "Header"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-header.js",
+            "filename": "/home/martin/corporate-ui-dev/src/themes.built/navigation.js",
+            "exports": [
+              "scania"
+            ]
+          },
+          {
+            "filename": "/home/martin/corporate-ui-dev/src/components/navigation/navigation.js",
+            "exports": [
+              "Navigation"
+            ]
+          },
+          {
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-header.c-navigation.js",
             "exports": []
           }
         ]
@@ -1096,14 +1298,18 @@
         "id": "entry.c-card.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CCard"],
+        "exports": [
+          "CCard"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/card/card.js",
-            "exports": ["Card"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/card/card.js",
+            "exports": [
+              "Card"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-card.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-card.js",
             "exports": []
           }
         ]
@@ -1112,14 +1318,48 @@
         "id": "entry.c-container.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CContainer"],
+        "exports": [
+          "CContainer"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/container/container.js",
-            "exports": ["Container"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/container/container.js",
+            "exports": [
+              "Container"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-container.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-container.js",
+            "exports": []
+          }
+        ]
+      },
+      {
+        "id": "entry.c-theme.js",
+        "isEntry": true,
+        "imports": [
+          "chunk-60719840.js"
+        ],
+        "exports": [
+          "CTheme"
+        ],
+        "modules": [
+          {
+            "filename": "/home/martin/corporate-ui-dev/src/themes.built/theme.js",
+            "exports": [
+              "corporate",
+              "man",
+              "scania"
+            ]
+          },
+          {
+            "filename": "/home/martin/corporate-ui-dev/src/components/theme/theme.js",
+            "exports": [
+              "Theme"
+            ]
+          },
+          {
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-theme.js",
             "exports": []
           }
         ]
@@ -1128,30 +1368,18 @@
         "id": "entry.c-row.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CRow"],
+        "exports": [
+          "CRow"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/row/row.js",
-            "exports": ["Row"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/row/row.js",
+            "exports": [
+              "Row"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-row.js",
-            "exports": []
-          }
-        ]
-      },
-      {
-        "id": "entry.c-navigation.js",
-        "isEntry": true,
-        "imports": [],
-        "exports": ["CNavigation"],
-        "modules": [
-          {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/navigation/navigation.js",
-            "exports": ["Navigation"]
-          },
-          {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-navigation.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-row.js",
             "exports": []
           }
         ]
@@ -1160,18 +1388,25 @@
         "id": "entry.c-list.user-repos.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CList", "UserRepos"],
+        "exports": [
+          "CList",
+          "UserRepos"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/list/list.js",
-            "exports": ["List"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/list/list.js",
+            "exports": [
+              "List"
+            ]
           },
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/user-repos/user-repos.js",
-            "exports": ["UserRepos"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/user-repos/user-repos.js",
+            "exports": [
+              "UserRepos"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-list.user-repos.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-list.user-repos.js",
             "exports": []
           }
         ]
@@ -1180,14 +1415,18 @@
         "id": "entry.c-icon.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CIcon"],
+        "exports": [
+          "CIcon"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/icon/icon.js",
-            "exports": ["Icon"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/icon/icon.js",
+            "exports": [
+              "Icon"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-icon.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-icon.js",
             "exports": []
           }
         ]
@@ -1196,14 +1435,18 @@
         "id": "entry.c-content.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CContent"],
+        "exports": [
+          "CContent"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/content/content.js",
-            "exports": ["Content"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/content/content.js",
+            "exports": [
+              "Content"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-content.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-content.js",
             "exports": []
           }
         ]
@@ -1212,14 +1455,18 @@
         "id": "entry.c-column.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CColumn"],
+        "exports": [
+          "CColumn"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/column/column.js",
-            "exports": ["Column"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/column/column.js",
+            "exports": [
+              "Column"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-column.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-column.js",
             "exports": []
           }
         ]
@@ -1228,38 +1475,48 @@
         "id": "entry.c-field.js",
         "isEntry": true,
         "imports": [],
-        "exports": ["CField"],
+        "exports": [
+          "CField"
+        ],
         "modules": [
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/components/field/field.js",
-            "exports": ["Field"]
+            "filename": "/home/martin/corporate-ui-dev/src/components/field/field.js",
+            "exports": [
+              "Field"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\src\\entry.c-field.js",
+            "filename": "/home/martin/corporate-ui-dev/src/entry.c-field.js",
             "exports": []
           }
         ]
       },
       {
-        "id": "chunk-6df4da1d.js",
+        "id": "chunk-60719840.js",
         "isEntry": false,
         "imports": [],
-        "exports": ["store"],
+        "exports": [
+          "store"
+        ],
         "modules": [
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\node_modules\\symbol-observable\\es\\ponyfill.js",
-            "exports": ["default"]
+            "filename": "/home/martin/corporate-ui-dev/node_modules/symbol-observable/es/ponyfill.js",
+            "exports": [
+              "default"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\node_modules\\symbol-observable\\es\\index.js",
-            "exports": ["default"]
+            "filename": "/home/martin/corporate-ui-dev/node_modules/symbol-observable/es/index.js",
+            "exports": [
+              "default"
+            ]
           },
           {
-            "filename": "C:\\git-repos\\corporate-ui-dev\\node_modules\\redux\\es\\redux.js",
+            "filename": "/home/martin/corporate-ui-dev/node_modules/redux/es/redux.js",
             "exports": []
           },
           {
-            "filename": "C:/git-repos/corporate-ui-dev/src/store/index.js",
+            "filename": "/home/martin/corporate-ui-dev/src/store/index.js",
             "exports": []
           }
         ]
@@ -1274,25 +1531,30 @@
     "src/components/field/field.tsx": [],
     "src/components/footer/footer.tsx": [
       "src/store",
-      "src/themes.built/c-footer"
+      "src/themes.built/footer"
     ],
     "src/components/header/header.tsx": [
       "src/store",
-      "src/themes.built/c-header"
+      "src/themes.built/header"
     ],
     "src/components/icon/icon.tsx": [],
     "src/components/list/list.tsx": [],
-    "src/components/navigation/navigation.tsx": [],
+    "src/components/navigation/navigation.tsx": [
+      "src/store",
+      "src/themes.built/navigation"
+    ],
+    "src/components/router-navigation/router-navigation.tsx": [],
     "src/components/row/row.tsx": [],
-    "src/components/theme/theme.tsx": ["src/store", "src/themes.built/c-theme"],
+    "src/components/theme/theme.tsx": [
+      "src/store",
+      "src/themes.built/theme"
+    ],
     "src/components/user-repos/user-repos.tsx": [],
     "src/store/index.ts": [],
-    "src/themes.built/c-footer.ts": [],
-    "src/themes.built/c-header.ts": [],
-    "src/themes.built/c-theme.ts": [],
-    "src/themes.built/cui-footer.ts": [],
-    "src/themes.built/cui-header.ts": [],
-    "src/themes.built/cui-theme.ts": []
+    "src/themes.built/footer.ts": [],
+    "src/themes.built/header.ts": [],
+    "src/themes.built/navigation.ts": [],
+    "src/themes.built/theme.ts": []
   },
   "collections": []
 }

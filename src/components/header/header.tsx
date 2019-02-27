@@ -9,6 +9,7 @@ import * as style from '../../themes.built/header';
   shadow: true
 })
 export class Header {
+  debugger
   @Prop() theme: string;
   @Prop() siteName = 'Application name';
   @Prop() siteUrl = '/';

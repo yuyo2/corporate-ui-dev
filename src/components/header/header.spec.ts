@@ -1,6 +1,8 @@
 import { Header } from './header';
 describe('app', () => {
-  it('builds', () => {
+  debugger
+  it('builds', () => { 
+    debugger
     expect(new Header()).toBeTruthy();
   });
 });
