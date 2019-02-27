@@ -156,6 +156,8 @@ module.exports = {
     "/corporate-ui/"
   ],
 
+  "testURL": "http://localhost",
+
   // The regexp pattern Jest uses to detect test files
   /* testRegex: "", */
 

@@ -2,8 +2,10 @@
   "presets": [
     [
       "@babel/preset-env",
+      "@babel/preset-typescript",
       {
         "targets": {
+          "node": "current",
           "chrome": "58",
           "ie": "11"
         }
