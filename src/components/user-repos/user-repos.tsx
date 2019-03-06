@@ -11,7 +11,6 @@ export class UserRepos {
   @State() repos: any = [];
 
   componentWillLoad() {
-    debugger;
     // fetch('https://api.github.com/users/' + this.userId + '/repos')
     //   .then((response: Response) => response.json())
     //   .then(response => {
@@ -19,6 +18,7 @@ export class UserRepos {
     //       return { text: repo.name }
     //     });
     //   });
+    debugger;
   }
 
   render() {
