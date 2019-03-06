@@ -1,7 +1,6 @@
-import { Component, Prop, State, Watch } from '@stencil/core';
+import { Prop, State, Watch } from '@stencil/core';
 
-import { store } from '../../global';
-import * as themes from '../../tmp/header';
+import { Component } from '../../global';
 
 @Component({
   tag: 'c-header',
@@ -9,14 +8,12 @@ import * as themes from '../../tmp/header';
   shadow: true
 })
 export class Header {
-  @Prop() theme: string;
   @Prop() siteName = 'Application name';
   @Prop() siteUrl = '/';
   @Prop() topItems: any = [{ text: 'global', location: '/' }];
   @Prop() primaryItems: any;
   @Prop() secondaryItems: any;
 
-  @State() currentTheme: string = this.theme || store.getState().theme;
   @State() show = false;
   // There should be a better way of solving this, either by "{ mutable: true }"
   // or "{ reflectToAttr: true }" or harder prop typing Array<Object>
@@ -27,14 +24,7 @@ export class Header {
     this._topItems = Array.isArray(items) ? items : JSON.parse(items);
   }
 
-  @Watch('theme')
-  updateTheme(name) {
-    this.currentTheme = name;
-  }
-
   componentWillLoad() {
-    store.subscribe(() => this.currentTheme = store.getState().theme);
-
     this.setItems(this.topItems);
   }
 
@@ -46,8 +36,6 @@ export class Header {
 
   render() {
     return [
-      this.currentTheme ? <style>{ themes[this.currentTheme] }</style> : '',
-
       <nav class='navbar navbar-expand-lg navbar-default'>
         <button
           class='navbar-toggler collapsed'
